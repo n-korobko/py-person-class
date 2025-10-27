@@ -1,7 +1,6 @@
 class Person:
     people: dict[str, "Person"] = {}
 
-
     def __init__(self, name: str, age: int) -> None:
         self.name = name
         self.age = age
@@ -23,4 +22,3 @@ def create_person_list(people: list[dict]) -> list["Person"]:
             person.husband = Person.people[data["husband"]]
 
     return list(Person.people.values())
-
